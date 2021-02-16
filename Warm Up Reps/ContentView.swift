@@ -17,20 +17,22 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+        NavigationView {
+            List {
+                ForEach(items) { item in
+                    NavigationLink(
+                        destination: Exercises(),
+                        label: {
+                            /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
+                        })
+                }
+                .onDelete(perform: deleteItems)
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
+            .listStyle(InsetGroupedListStyle())
+            .navigationBarTitle("Warm Up Reps")
+            .navigationBarItems(leading: EditButton(), trailing: Button(action: addItem) {
+                Image(systemName: "plus")
+            })
         }
     }
 

@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47962B1925DB8A71009C7894 /* AddExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47962B1825DB8A71009C7894 /* AddExercise.swift */; };
 		47DECBA525D8C50E006392EA /* Warm_Up_RepsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DECBA425D8C50E006392EA /* Warm_Up_RepsApp.swift */; };
 		47DECBA725D8C50E006392EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DECBA625D8C50E006392EA /* ContentView.swift */; };
 		47DECBA925D8C50F006392EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47DECBA825D8C50F006392EA /* Assets.xcassets */; };
 		47DECBAC25D8C50F006392EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47DECBAB25D8C50F006392EA /* Preview Assets.xcassets */; };
 		47DECBAE25D8C50F006392EA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DECBAD25D8C50F006392EA /* Persistence.swift */; };
 		47DECBB125D8C50F006392EA /* Warm_Up_Reps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47DECBAF25D8C50F006392EA /* Warm_Up_Reps.xcdatamodeld */; };
+		47DECBC125DB75B1006392EA /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DECBC025DB75B1006392EA /* Exercises.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47962B1825DB8A71009C7894 /* AddExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExercise.swift; sourceTree = "<group>"; };
 		47DECBA125D8C50E006392EA /* Warm Up Reps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Warm Up Reps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DECBA425D8C50E006392EA /* Warm_Up_RepsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warm_Up_RepsApp.swift; sourceTree = "<group>"; };
 		47DECBA625D8C50E006392EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		47DECBAD25D8C50F006392EA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		47DECBB025D8C50F006392EA /* Warm_Up_Reps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Warm_Up_Reps.xcdatamodel; sourceTree = "<group>"; };
 		47DECBB225D8C50F006392EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47DECBC025DB75B1006392EA /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		47DECBA325D8C50E006392EA /* Warm Up Reps */ = {
 			isa = PBXGroup;
 			children = (
+				47962B1825DB8A71009C7894 /* AddExercise.swift */,
 				47DECBA425D8C50E006392EA /* Warm_Up_RepsApp.swift */,
 				47DECBA625D8C50E006392EA /* ContentView.swift */,
+				47DECBC025DB75B1006392EA /* Exercises.swift */,
 				47DECBA825D8C50F006392EA /* Assets.xcassets */,
 				47DECBAD25D8C50F006392EA /* Persistence.swift */,
 				47DECBB225D8C50F006392EA /* Info.plist */,
@@ -146,6 +152,8 @@
 			files = (
 				47DECBAE25D8C50F006392EA /* Persistence.swift in Sources */,
 				47DECBB125D8C50F006392EA /* Warm_Up_Reps.xcdatamodeld in Sources */,
+				47DECBC125DB75B1006392EA /* Exercises.swift in Sources */,
+				47962B1925DB8A71009C7894 /* AddExercise.swift in Sources */,
 				47DECBA725D8C50E006392EA /* ContentView.swift in Sources */,
 				47DECBA525D8C50E006392EA /* Warm_Up_RepsApp.swift in Sources */,
 			);
