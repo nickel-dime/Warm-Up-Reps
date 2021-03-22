@@ -35,9 +35,12 @@ struct Exercises: View {
             }
         }
         .navigationBarTitle("Exercises")
-        .navigationBarItems(trailing: Button(action: addItem) {
+        .navigationBarItems(leading: EditButton(), trailing: Button(action: addItem) {
             Image(systemName: "plus")
+                .padding(8.0).offset(x: 8.0)
+
         })
+        .imageScale(.large)
         .ignoresSafeArea()
         .sheet(isPresented: $showingAddExercise, content: {
             AddExercise()
@@ -81,7 +84,12 @@ struct Exercises: View {
     }
 }
 
-
+extension View {
+  func endTextEditing() {
+    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                    to: nil, from: nil, for: nil)
+  }
+}
 
 struct Exercises_Previews: PreviewProvider {
     static var previews: some View {

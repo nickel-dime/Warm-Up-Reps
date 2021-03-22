@@ -13,7 +13,7 @@ struct AddExercise: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State private var name = ""
-    @State private var currentWeight = 0
+    @State private var currentWeightString = ""
     @State private var increment = 0.0
     
     @State var showingAlert = false
@@ -29,7 +29,9 @@ struct AddExercise: View {
                     // TODO:
                     // 1. fix textField for number
                     // 2. dismiss keyboard on tap
-                    TextField("Current Weight", value: $currentWeight, formatter: NumberFormatter())
+                    TextField("Current Weight", text: $currentWeightString)
+                        .keyboardType(.decimalPad)
+
                 })
                 Section(header: Text("Increment"), content: {
                     VStack {
@@ -60,10 +62,11 @@ struct AddExercise: View {
     }
     
     func validate() {
-        if (!self.name.isEmpty && self.currentWeight != 0) {
+        let currentWeight = Double(self.currentWeightString)
+        if (!self.name.isEmpty && currentWeight != 0) {
             let newExercise = Exercise(context: self.moc)
             newExercise.name = self.name
-            newExercise.currentWeight = Int16(self.currentWeight)
+            newExercise.currentWeight = currentWeight ?? 0
             newExercise.increment = Double(self.increment)
             
             if self.moc.hasChanges {
